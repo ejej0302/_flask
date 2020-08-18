@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/style.css" />
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h2>AI 상담 결과 자동 분류 - Tester</h2>
+    <div id ='ss'>
+        <form action="/" method="post">
+            <br>
+            <input type="text" name='title' placeholder="제목" style="width:600px;"><br>
+            <textarea name='content' rows=10 cols=75 placeholder="상담 내용을 작성하세요." ></textarea><br>
+            <!-- <input type="text" name='content' placeholder="상담 내용을 작성하세요." style=" width:500px; height:100px;">><br> -->
+            <input type="submit" value="2선_처리부서_매핑요청"><br>
+        </form>
+        <br>
+        <div>
+        <ul>
+            {% for res in result %}
+            <li>{{res[0]}} : {{res[1]}}</li>
+            {% endfor %}
+        </ul>
+        </div>
+    </div>
+</body>
+</html>
+
